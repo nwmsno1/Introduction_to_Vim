@@ -1,5 +1,8 @@
----
 # Vim 使用简介
+---
+## 目录
+* **[Command Mode](#command-mode)**
+
 ---
 ## Command Mode
 ### Cursor Motions

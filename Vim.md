@@ -2,7 +2,17 @@
 ---
 ## 目录
 * **[Command Mode](#command-mode)**
-
+  * [Cursor Motions](#cursor-motions)
+  * [Edit Command](#edit-command)
+  * [Window Motion](#window-motion)
+* **[Insert Mode](#insert-mode)**
+* **[Visual Mode](#visual-mode)**
+* **[Search and Replace](#search-and-replace)**
+  * [Basic usage](#basic-usage)
+  * [Replace](#replace)
+  * [Regular Expression](#regular-expression)
+  * [Vim 中常用的替换表达式](#vim-中常用的替换表达式)
+  
 ---
 ## Command Mode
 ### Cursor Motions

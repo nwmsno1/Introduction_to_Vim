@@ -224,4 +224,62 @@ Vim中的搜索和替换同样支持正则表达式。大部分语法与其他�
 
 
 ## Ctags and Taglist
-Ctags可以定义项目目录下的文件所包含的结构体、函数类型、变量类型、函数名所在位置，并可以解析他们之间的调用
+Ctags可以定义项目目录下的文件所包含的结构体、函数类型、变量类型、函数名所在位置，并可以他们之间跳转。
+### Ctags Configure
+1. 在项目目录下生成tags文件，文件记录了函数、变量等的位置和类型。
+```
+cd /path/to/project
+ctags -R *
+```
+2. 在`~/.vimrc`中设置
+```
+set tags=tags
+```
+3. 打开项目中的文件
+- `<ctrl>]`: 进入光标所指的标识符的定义
+- `<ctrl>t`: 回到前一个标签处
+
+### 为Python标准库添加标签
+1. 假设Python标准库的位置是`/usr/lib/python3.6`
+```
+ctags -R -f ~/.python.tags /usr/lib/python3.6
+```
+2. 在`~/.vimrc`中添加设置
+```
+set tags+=~/.python.tags
+```
+
+### 为C/C++系统函数添加标签
+1. 设置系统头文件标签
+```
+ctags -R -f ~/.sys.tags /usr/include /usr/local/include
+```
+2. 在`~/.vimrc`中添加设置
+```
+set tags+=~/.sys.tags
+```
+
+### Taglist Configure
+1. 安装Taglist，在[Taglist](http://vim-taglist.sourceforge.net/)官网下载插件，并解压到`~/.vim/`目录中，保证该目录下存在：
+```
+plugin/taglist.vim
+doc/taglist.txt
+```
+2. 打开项目中的文件，在Command Mode下输入
+```
+:Tilst
+```
+3. Taglist中常用快捷键
+
+|   命令    |   功能   |
+|----------:|---------:|
+|   `<ctrl>ww` |在文本窗口和Taglist窗口间切换
+| `o` |在一个新打开的窗口中显示光标下tag
+| `s` |更改排序方式，在按名字排序和按出现顺序排序间切换
+| `+` |打开一个折叠，同zo
+| `-` |将tag折叠起来，同zc
+| `*` |打开所有的折叠，同zR
+|`=`  |将所有tag折叠起来，同zM
+|`[[` | 跳到前一个文件
+|`]]` | 跳到后一个文件
+|`q`  |关闭taglist窗口

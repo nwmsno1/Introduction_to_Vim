@@ -1,4 +1,4 @@
-# Vim 使用简介
+# Vim 使用笔记
 ---
 ## 目录
 * **[Command Mode](#command-mode)**

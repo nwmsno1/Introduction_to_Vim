@@ -12,6 +12,11 @@
   * [Replace](#replace)
   * [Regular Expression](#regular-expression)
   * [Vim 中常用的替换表达式](#vim-中常用的替换表达式)
+* **[Ctags and Taglist](#ctags-and-taglist)**
+  * [Ctags Configure](#ctags-configure)
+  * [为Python标准库添加标签](#pythontag)
+  * [为C/C++系统函数添加标签](#systag)
+  * [Taglist Configure](#taglist-configure)
   
 ---
 ## Command Mode
@@ -239,6 +244,8 @@ set tags=tags
 - `<ctrl>]`: 进入光标所指的标识符的定义
 - `<ctrl>t`: 回到前一个标签处
 
+<h1 id="pythontag"></h1>
+
 ### 为Python标准库添加标签
 1. 假设Python标准库的位置是`/usr/lib/python3.6`
 ```
@@ -248,6 +255,8 @@ ctags -R -f ~/.python.tags /usr/lib/python3.6
 ```
 set tags+=~/.python.tags
 ```
+
+<h2 id="systag"></h2>
 
 ### 为C/C++系统函数添加标签
 1. 设置系统头文件标签
@@ -272,7 +281,7 @@ doc/taglist.txt
 3. Taglist中常用快捷键
 
 |   命令    |   功能   |
-|----------:|---------:|
+|----------|:---------:|
 |   `<ctrl>ww` |在文本窗口和Taglist窗口间切换
 | `o` |在一个新打开的窗口中显示光标下tag
 | `s` |更改排序方式，在按名字排序和按出现顺序排序间切换

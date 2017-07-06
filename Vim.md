@@ -67,7 +67,7 @@
 ## Search and Replace
 ### Basic usage
 1. 在Command Mode 下输入`/xxxx` 后按`<Enter>`可在光标后搜索内容为xxxx的字段。
-2. `n`: 跳转下一个字段，`b`: 跳转上一个字段。
+2. `n`: 跳转下一个字段，`N`: 跳转上一个字段。
 
 ### Replace
 ```

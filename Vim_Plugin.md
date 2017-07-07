@@ -24,10 +24,12 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 ```
 ### 安装插件
-在刚才输入的代码段`call vundle#begin()`和`call vundle#end() `之间放置插件，插入以下代码。
+- 在刚才输入的代码段`call vundle#begin()`和`call vundle#end() `之间放置插件，插入以下代码。
 ```vim
 Plugin 'git_name/plugin_name'
 ```
+> Note: `git_name`是该插件github的用户名，`plugin_name`是该插件github的项目名，通常就是插件的名字。
+如果这里不写`git_name`，vundle默认在[vim-scripts](https://github.com/vim-scripts)用户中搜索插件。
 
 ## 状态栏插件：vim-airline
 这是一个界面美化插件，先看看效果。

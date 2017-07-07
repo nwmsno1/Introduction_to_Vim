@@ -17,6 +17,7 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
 " Put plugin here
 
@@ -30,6 +31,12 @@ Plugin 'git_name/plugin_name'
 ```
 > Note: `git_name`是该插件github的用户名，`plugin_name`是该插件github的项目名，通常就是插件的名字。
 如果这里不写`git_name`，vundle默认在[vim-scripts](https://github.com/vim-scripts)用户中搜索插件。
+
+- 进入Command Mode输入
+```vim
+:PluginInstall
+```
+vundle会自动下载安装之前写在`~/.vimrc`中的插件。
 
 ## 状态栏插件：vim-airline
 这是一个界面美化插件，先看看效果。
